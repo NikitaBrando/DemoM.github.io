@@ -1,0 +1,152 @@
+html{
+  background:  url(https://media2.giphy.com/media/26uf7RM9Nb9WgpMv6/source.gif);
+}
+*{
+	margin:0px;
+}
+.container{
+margin: 50px;
+display: flex;
+}
+.logo{
+	background: #D26D0F;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.block{
+width: 239px;
+height: 327px;
+left: 73px;
+top: 302px;
+display: flex;
+
+background: #F9CF90;
+}
+.imagine{
+	position: absolute;
+width: 239px;
+height: 198px;
+left: 73px;
+top: 301px;
+
+background: #C4C4C4;
+}
+.adventaiges{
+	width:86.5%;
+	display: flex;
+	justify-content: space-between; 
+	text-align: center;
+	flex-wrap: wrap;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin: auto 125px;
+	background:url(images/c85748a69e1855f87f98519d11d89221.png);
+}
+.adventaiges_item{
+max-width: 100%;
+margin: 25px;
+background-color: #FF8C00;
+padding: 5px;
+border-radius: 8%;
+color: #A52A2A;
+}
+.adventaiges_item :hover{
+	color: orange;
+}
+.kart{
+	border-radius:8%; 
+	opacity: 1;
+}
+.kart:hover{
+opacity: 0.5;
+}
+p{
+	margin: auto 10px;
+	align-items: right;
+	color: silver;
+}
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #A52A2A;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */ 
+    margin: auto 110px;
+    border-radius: 19px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 20%;
+    border: 20px
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+    opacity: 90%;
+}
+
+/* Main content */
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+
+}
+footer{
+	margin:0;
+	max-width: 100%;
+	background-color: #FF8C00;
+    text-align: center;
+padding: 10px 0px;
+}
+.social{
+	margin-top: 10px;
+}
+.social :hover{
+background-color: #A52A2A;
+border-radius: 50%;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:991px){
+	.button{
+		float: left;
+		margin: 5px 15px;
+		display: block;
+		color: green;
+	}
+}
+
+@media screen and (max-width:  767px){
+	.button{
+		float: left;
+		margin: 5px 15px;
+		display: block;
+		color: green;
+	}
+}
+@media screen and (max-width:  479px){
+	.button{
+		float: left;
+		margin: 5px 15px;
+		display: block;
+		color: green;
+	}
+	.adventaiges_item{
+		margin: auto 0px;
+	}
+}
+
