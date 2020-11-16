@@ -66,34 +66,53 @@ p{
 	align-items: right;
 	color: silver;
 }
-/* The navigation bar */
-.navbar {
-    overflow: hidden;
-    background-color: #A52A2A;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */ 
-    margin: auto 110px;
-    border-radius: 19px;
+.menu__box{
+	margin: 0px auto;
+	position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    list-style-type: none;
+    display: inline-flex;
+    background-color:brown;
+    padding: 10px;
+    opacity: 80%;
 }
-
-/* Links inside the navbar */
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+.button{
+	text-decoration: none;
+    display: inline-flex;
+    margin: 0 19px;
+    background-color:#FF8C00 ; 
+    padding: 10px;
     border-radius: 20%;
-    border: 20px
+    font-family: 'Roboto', sans-serif;
+    color: #A52A2A;
+}
+.button:hover{
+background-color: #A52A2A;
+color: #FF8C00;
+opacity: 100%;
 }
 
-/* Change background on mouse-over */
-.navbar a:hover {
-    background: #ddd;
-    color: black;
-    opacity: 90%;
+.menu__box:hover{
+opacity: 100%
 }
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
 
 /* Main content */
 .main {
@@ -114,39 +133,97 @@ padding: 10px 0px;
 background-color: #A52A2A;
 border-radius: 50%;
 }
-
-
-
-
-
-
-
-@media screen and (max-width:991px){
-	.button{
-		float: left;
-		margin: 5px 15px;
-		display: block;
-		color: green;
-	}
+.Buy{
+	text-decoration: none;
+    border: none; outline: none; 
+    background-color:#FF8C00 ; 
+    font-family:  'Roboto', sans-serif;
+    color: green;
+}
+.Buy:hover{
+    background-color:green ; 
+    border-radius: 30%;
 }
 
-@media screen and (max-width:  767px){
-	.button{
-		float: left;
-		margin: 5px 15px;
-		display: block;
-		color: green;
-	}
+
+
+
+
+
+
+@media screen and (max-width:994px){
+	/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
 }
-@media screen and (max-width:  479px){
-	.button{
-		float: left;
-		margin: 5px 15px;
-		display: block;
-		color: green;
-	}
-	.adventaiges_item{
-		margin: auto 0px;
-	}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.button {
+  display: block;
+  padding: 12px 24px;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.button :hover{
+  background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
 }
 
