@@ -199,6 +199,7 @@ border-radius: 50%;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
+  margin: 10px 0;
 }
 .button :hover{
   background-color: #CFD8DC;
@@ -234,8 +235,8 @@ border-radius: 50%;
 
 @media screen and (max-width:635px){
 	.adventaiges{
-		width: 40%;
-
+		max-width: 100%;
+    margin-left: 95px;
 	}
 	.adventaiges_item{
 		padding: 20px;
@@ -245,6 +246,7 @@ border-radius: 50%;
     border-radius: 10%;
     background-color:#D26D0F; 
     color: white;
+    margin: 0;
 	}
 	.Buy{
     background-color: red;
@@ -253,8 +255,22 @@ border-radius: 50%;
     color: white;
 	}
 	html{
-  background:  url(https://cdn.dribbble.com/users/1086322/screenshots/3830216/autumn-dribbble.gif);
+		background: none;
+  background-color: #FFEFCE;
   background-size: contain;
 }
+}
+@media screen and (max-width:375px){
+	.adventaiges{
+	margin-left: 35px;
+    width: auto;
+	}
+}
+
+@media screen and (max-width:320px){
+	.adventaiges{
+	margin-left: 15px;
+
+	}
 }
 
